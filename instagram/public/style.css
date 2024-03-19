@@ -1,0 +1,19 @@
+.main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.inside{
+    margin:10px;
+    /* height:50px; */
+}
+
+img{
+    width:16rem;
+    height:300px;
+}
+
+.menu{
+    height:50px;
+}

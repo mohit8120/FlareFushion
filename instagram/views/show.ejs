@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>See in detail</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h2><%=post.username%></h2>
+    <button>Follow</button>
+    &nbsp;&nbsp;
+    <button>Message</button>
+    <div class="card inside" style="width: 18rem;">
+        <img src="<%=post.image%>" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text"><%=post.caption%></p>
+          <!-- <a href="#" class="btn btn-primary">See in detail</a> -->
+        </div>
+    </div>
+</body>
+</html>

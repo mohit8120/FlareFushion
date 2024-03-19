@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+   <nav class="navbar bg-body-tertiary menu">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="https://www.bing.com/ck/a?!&&p=5b87a9d08830e2c9JmltdHM9MTcwNzQzNjgwMCZpZ3VpZD0yMjIwZmYxYi0wMTJlLTY1YTUtMzU4NS1lY2YzMDBmYjY0ODYmaW5zaWQ9NTUxOQ&ptn=3&ver=2&hsh=3&fclid=2220ff1b-012e-65a5-3585-ecf300fb6486&u=a1L2ltYWdlcy9zZWFyY2g_cT1pbnN0YWdyYW0raW1hZ2UmaWQ9Mjg5MTE4OEFCNzYwNEY5QjVCOTI5OTRDMTc4NUJDOTZBRUNFQ0I2OCZGT1JNPUlRRlJCQQ&ntb=1" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+        Instagram
+      </a>
+    </div>
+   </nav>
+   <div class="main">
+    <%for(let post of posts){%>
+    <div class="card inside" style="width: 18rem;">
+        <h5 class="card-title">@<%=post.username%></h5>
+        <img src="<%=post.image%>" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text"><%=post.caption%></p>
+          <a href="http://localhost:8080/posts/<%=post.id%>" class="btn btn-primary">See in detail</a>
+          <a href="http://localhost:8080/posts/<%=post.id%>/edit" class="btn btn-primary">Edit</a>
+          <form method="post" action="/posts/<%=post.id%>?_method=DELETE" >
+              <button>Delete</button>
+          </form>
+        </div>
+    </div>
+    <%}%>
+   </div>
+    
+</body>
+</html>
